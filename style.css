@@ -1,0 +1,234 @@
+:root {
+  --green: #154734;
+  --red: #dc1c13;
+}
+
+* {
+  font-family: Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: var(--green);
+  background: #faf9f4;
+  line-height: 1.6;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ===== LOGO SECTION ===== */
+
+.logo-section {
+  margin: 0;       /* section の上下余白を消す */
+  padding: 0;
+  text-align: center;
+  line-height: 0;  /* inline 画像の余白を消す */
+  font-size: 0;    /* inline 画像の下の空白を消す */
+}
+
+.logo-section img {
+  display: inline-block;  /* block だとバナーが消えたようになる */
+  max-width: 100%;        /* 親幅に収まる */
+  height: auto;           /* 縦横比を維持 */
+}
+/* ===== TOP BAR ===== */
+.top-bar {
+  background-color: #154734; /* 緑のバー */
+  color: #ffffff;            /* 白文字 */
+  padding: 0;
+  text-align: center;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.top-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-inner .flag {
+  width: 24px;
+  height: auto;
+}
+
+/* 日本時間 */
+#japan-time {
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 450px; /* 統一サイズ */
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+.hero-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FREE SHIPPING ===== */
+.free {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ===== PAYMENT ICONS ===== */
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.payment-icons img, .payment-icons svg {
+  height: 29px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ===== NEWS ===== */
+.news ul {
+  list-style: none;
+  padding: 0;
+}
+
+.news li {
+  margin-bottom: 8px;
+}
+
+/* ===== CUSTOM SERVICE ===== */
+.custom-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+ 
+.custom-service-section img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== SALES HISTORY ===== */
+.card-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 250px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  text-align: center;
+}
+
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card h3 {
+  margin: 8px 0 4px 0;
+}
+
+.card p {
+  margin: 0 0 8px 0;
+  color: var(--red);
+  font-weight: bold;
+}
+
+/* ===== REVIEW ===== */
+.section p {
+  margin-bottom: 10px;
+}
+
+/* ===== CONTACT & FOOTER ===== */
+.contact .footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+}
+
+.contact nav a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 12px;
+}
+
+/* ===== MEDIA ===== */
+@media (max-width: 768px) {
+  .card {
+    min-width: 180px;
+  }
+
+  .top-inner {
+    /* flex-direction: column; */
+    gap: 5px;
+  }
+
+  .hero {
+    height: 300px;
+  }
+}

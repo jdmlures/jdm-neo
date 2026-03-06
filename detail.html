@@ -1,197 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>JDMLures Detail</title>
 
-<link rel="stylesheet" href="detail.css">
+<!-- 共通CSS -->
+<link rel="stylesheet" href="../style.css">
 
+<!-- favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
-
-
 </head>
 
 <body>
 
-
-
-<!-- 商品タイトル / 価格 -->
-<section class="section">
-
-<div class="container">
-
-<h2 id="detail-title">SAMPLE</h2>
-
-<div class="price-buy-wrapper top">
-
-<p id="detail-price">$0</p>
-
-<div id="paypal-button-container-top"></div>
-
+<!-- ================= 共通トップバー(index共通) ================= -->
+<div class="top-bar">
+  <div class="top-inner">
+    <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" class="flag" alt="Japan Flag">
+    <span id="japan-time"></span>
+  </div>
 </div>
 
-<p id="detail-desc"></p>
-
-</div>
-
+<!-- ================= 共通ロゴ(index共通) ================= -->
+<section class="section logo-section">
+  <img src="../img/logo.png" alt="JDMLures Logo">
 </section>
 
+<!-- ================= detailタイトル & 価格 ================= -->
+<section class="section">
+  <div class="container">
+    <h2 id="detail-title">Sample Product</h2>
 
+    <div class="price-buy-wrapper top">
+      <p id="detail-price">$0</p>
+      <div id="paypal-button-container-top" class="paypal-wrapper"></div>
+    </div>
 
-<!-- HERO（indexスライド再利用） -->
+    <p id="detail-desc">This is a sample product description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</section>
+
+<!-- ================= HERO（indexスライド再利用） ================= -->
 <section class="section hero">
-
-<div class="container">
-
-<img id="detail-hero-img" alt="Product Hero">
-
-<p class="image-caption" id="hero-caption"></p>
-
-</div>
-
+  <div class="container">
+    <img id="detail-hero-img" src="../img/hero/sample-hero.jpg" alt="Product Hero">
+    <p class="image-caption" id="hero-caption">Sample Hero Caption</p>
+  </div>
 </section>
 
-
-
-<!-- 別角度ショット1 -->
+<!-- ================= 別角度ショット ================= -->
 <section class="section">
-
-<div class="container">
-
-<img id="detail-img-1">
-
-<p class="image-caption" id="caption-1"></p>
-
-</div>
-
+  <div class="container">
+    <img id="detail-img-1" src="../img/detail/sample1.jpg" alt="Angle 1">
+    <p class="image-caption" id="caption-1">Front angle view</p>
+  </div>
 </section>
 
-
-
-<!-- 別角度ショット2 -->
 <section class="section">
-
-<div class="container">
-
-<img id="detail-img-2">
-
-<p class="image-caption" id="caption-2">adfegr</p>
-
-</div>
-
+  <div class="container">
+    <img id="detail-img-2" src="../img/detail/sample2.jpg" alt="Angle 2">
+    <p class="image-caption" id="caption-2">Side angle view</p>
+  </div>
 </section>
 
-
-
-<!-- 別角度ショット3 -->
 <section class="section">
-
-<div class="container">
-
-<img id="detail-img-3">
-
-<p class="image-caption" id="caption-3">weferer</p>
-
-</div>
-
+  <div class="container">
+    <img id="detail-img-3" src="../img/detail/sample3.jpg" alt="Angle 3">
+    <p class="image-caption" id="caption-3">Rear angle view</p>
+  </div>
 </section>
 
-
-
-<!-- 支払いエリア -->
+<!-- ================= 支払いエリア(detail専用) ================= -->
 <section class="section back-section">
+  <div class="payment-icons">
+    <!-- PayPal -->
+    <svg viewBox="0 0 140 40">
+      <g transform="translate(0,4)">
+        <path fill="#003087" d="M18 4c6 0 10 4 9 9s-5 9-11 9h-4l-2 12H4l5-30h9z"/>
+        <path fill="#009CDE" d="M22 4c5 0 8 3 7 7s-4 7-9 7h-5l-2 12H6l4-26h12z"/>
+      </g>
+      <text x="42" y="26" font-family="Arial" font-size="22" font-weight="700">
+        <tspan fill="#003087">Pay</tspan><tspan fill="#009CDE">Pal</tspan>
+      </text>
+    </svg>
+    <img src="../custom/c_img/visa.png" alt="Visa">
+    <svg viewBox="0 0 48 32">
+      <circle cx="18" cy="16" r="10" fill="#EB001B"/>
+      <circle cx="30" cy="16" r="10" fill="#F79E1B"/>
+      <path fill="#FF5F00" d="M24 6a10 10 0 000 20 10 10 0 000-20z"/>
+    </svg>
+    <svg viewBox="0 0 60 38">
+      <rect width="60" height="38" fill="#2E77BB"/>
+      <text x="30" y="16" font-size="9" fill="#ffffff" font-family="Arial" font-weight="bold" text-anchor="middle">AMERICAN</text>
+      <text x="30" y="28" font-size="9" fill="#ffffff" font-family="Arial" font-weight="bold" text-anchor="middle">EXPRESS</text>
+    </svg>
+  </div>
 
-<div class="payment-icons">
+  <p class="caution">
+    ✅ <span style="color:#00457C;">All payments are securely processed via PayPal. You may pay easily with your debit or credit card — no PayPal account required.</span>
+  </p>
 
-<!-- PayPal -->
-<svg viewBox="0 0 140 40">
-<g transform="translate(0,4)">
-<path fill="#003087" d="M18 4c6 0 10 4 9 9s-5 9-11 9h-4l-2 12H4l5-30h9z"/>
-<path fill="#009CDE" d="M22 4c5 0 8 3 7 7s-4 7-9 7h-5l-2 12H6l4-26h12z"/>
-</g>
-<text x="42" y="26" font-family="Arial" font-size="22" font-weight="700">
-<tspan fill="#003087">Pay</tspan>
-<tspan fill="#009CDE">Pal</tspan>
-</text>
-</svg>
+  <div class="container">
+    <div class="price-buy-wrapper bottom">
+      <p id="detail-price-bottom">$0</p>
+      <div id="paypal-button-container-bottom" class="paypal-wrapper"></div>
+    </div>
 
-<img src="../custom/c_img/visa.png" alt="Visa">
+    <a href="../index.html" class="back-button">BACK</a>
+  </div>
 
-<svg viewBox="0 0 48 32">
-<circle cx="18" cy="16" r="10" fill="#EB001B"/>
-<circle cx="30" cy="16" r="10" fill="#F79E1B"/>
-<path fill="#FF5F00" d="M24 6a10 10 0 000 20 10 10 0 000-20z"/>
-</svg>
-
-<svg viewBox="0 0 60 38">
-<rect width="60" height="38" fill="#2E77BB"/>
-<text x="30" y="16" font-size="9" fill="#ffffff" font-family="Arial" font-weight="bold" text-anchor="middle">
-AMERICAN
-</text>
-<text x="30" y="28" font-size="9" fill="#ffffff" font-family="Arial" font-weight="bold" text-anchor="middle">
-EXPRESS
-</text>
-</svg>
-
-</div>
-
-
-
-<p class="caution">
-
-✅ <span style="color:#00457C;">
-All payments are securely processed via PayPal.
-You may pay easily with your debit or credit card — no PayPal account required.
-</span>
-
-</p>
-
-
-
-<div class="container">
-
-<div class="price-buy-wrapper bottom">
-
-<p id="detail-price-bottom">$0</p>
-
-<div id="paypal-button-container-bottom"></div>
-
-</div>
-
-
-<a href="../index.html" class="back-button">BACK</a>
-
-</div>
-
-
-
-<footer class="footer">
-
-<p>© 2026 JDM Lures All Rights Reserved.</p>
-
-<nav>
-
-<a href="../policy/policy.html">Refund Policy</a> |
-
-<a href="../policy/policy.html">Terms of Service</a> |
-
-<a href="../policy/policy.html">Privacy Policy</a>
-
-</nav>
-
-</footer>
-
+  <!-- ================= フッター(index共通) ================= -->
+  <footer class="footer">
+    <p>© 2026 JDM Lures All Rights Reserved.</p>
+    <nav>
+      <a href="../policy/policy.html">Refund Policy</a> |
+      <a href="../policy/policy.html">Terms of Service</a> |
+      <a href="../policy/policy.html">Privacy Policy</a>
+    </nav>
+  </footer>
 </section>
 
-
-
+<!-- JS -->
+<script src="../js/main.js"></script>
 <script src="detail.js"></script>
-
 </body>
 </html>
